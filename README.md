@@ -44,9 +44,9 @@ Sample Output
 }
 
 ```
-Check VPCs you created using this command 
+Check VPCs you created using this command(using VPC ids listed above while you created)
 ```
-aws ec2 describe-vpcs
+aws ec2 describe-vpcs --vpc-ids <"vpc-id">
 
 ```
 Sample Output will be like this and pending state will be changed to available
@@ -54,30 +54,6 @@ Sample Output will be like this and pending state will be changed to available
 ```
 {
     "Vpcs": [
-        {
-            "CidrBlock": "10.0.0.0/16",
-            "DhcpOptionsId": "dopt-0f2fdf4ddbc536009",
-            "State": "available",
-            "VpcId": "vpc-0b126e7a6aa4f0f00",
-            "OwnerId": "471112757594",
-            "InstanceTenancy": "default",
-            "CidrBlockAssociationSet": [
-                {
-                    "AssociationId": "vpc-cidr-assoc-03ff1ca50689a78d7",
-                    "CidrBlock": "10.0.0.0/16",
-                    "CidrBlockState": {
-                        "State": "associated"
-                    }
-                }
-            ],
-            "IsDefault": false,
-            "Tags": [
-                {
-                    "Key": "Name",
-                    "Value": "MyVpc"
-                }
-            ]
-        },
         {
             "CidrBlock": "172.31.0.0/16",
             "DhcpOptionsId": "dopt-0f2fdf4ddbc536009",
