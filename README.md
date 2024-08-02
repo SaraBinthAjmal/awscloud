@@ -21,7 +21,7 @@ Sample Output
         "DhcpOptionsId": "dopt-0f2fdf4ddbc536009",
         "State": "pending",
         "VpcId": "vpc-0b126e7a6aa4f0f00",
-        "OwnerId": "471112757594",
+        "OwnerId": "123456789",
         "InstanceTenancy": "default",
         "Ipv6CidrBlockAssociationSet": [],
         "CidrBlockAssociationSet": [
@@ -59,7 +59,7 @@ Sample Output will be like this and pending state will be changed to available
             "DhcpOptionsId": "dopt-0f2fdf4ddbc536009",
             "State": "available",
             "VpcId": "vpc-00027fefa9345cb18",
-            "OwnerId": "471112757594",
+            "OwnerId": "12354654",
             "InstanceTenancy": "default",
             "CidrBlockAssociationSet": [
                 {
