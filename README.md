@@ -76,6 +76,9 @@ Sample Output will be like this and pending state will be changed to available
 }
 
 ```
+
+How to delete a VPC using VPC id use the command below
+
 ```
 aws ec2 delete-vpc --vpc-id <value>
 
