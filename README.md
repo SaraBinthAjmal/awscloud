@@ -76,6 +76,7 @@ Sample Output will be like this and pending state will be changed to available
 }
 
 ```
+```
 aws ec2 delete-vpc --vpc-id <value>
 
 ```
