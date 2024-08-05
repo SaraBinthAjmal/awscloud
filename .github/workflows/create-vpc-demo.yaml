@@ -1,0 +1,9 @@
+name: Create VPC demo
+on:
+    workflow_dispatch:
+      inputs:
+        environment:
+          description: Target environment runs manually
+          required: true
+          type: string
+          
