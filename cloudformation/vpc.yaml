@@ -4,7 +4,7 @@ Description: >
    Author: Ajmal
    Company: test
 Resources:
-  myVPC: MyNewVPC
+  myVPC: 
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
