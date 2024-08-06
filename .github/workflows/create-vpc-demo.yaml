@@ -19,5 +19,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - run: ls -lR
-#      - run: aws cloudformation create-stack --stack-name prod-vpc --template-body file://vpc.yaml
-#      - run: aws ec2 describe-vpcs
+      - run: aws cloudformation create-stack --stack-name prod-vpc --template-body file://cloudformation/vpc.yaml
+      - run: sleep 20
+      - run: aws cloudformation describe-stack-events --stack-name prod-vc
