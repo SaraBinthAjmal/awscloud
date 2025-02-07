@@ -21,7 +21,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-          aws ec2 create-subnet \
+      - run: aws ec2 create-subnet \
                 --vpc-id vpc-0424bd07b2433d81c \
-                --cidr-block 172.0.0.5/28 \
+                --cidr-block 172.0.0.55/28 \
                 --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value='my-ipv4-subnet'}]
