@@ -23,5 +23,5 @@ jobs:
           aws-region: us-east-1
           aws ec2 create-subnet \
                 --vpc-id vpc-0424bd07b2433d81c \
-                --cidr-block 173.0.0.5/28 \
-                --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=my-ipv4-subnet}]
+                --cidr-block 172.0.0.5/28 \
+                --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value='my-ipv4-subnet'}]
