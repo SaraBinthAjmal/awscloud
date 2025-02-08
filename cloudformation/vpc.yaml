@@ -8,7 +8,7 @@ Resources:
   myVPC: 
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: 100.100.0.0/16
-      Tags:
-       - Key: stack
+        CidrBlock: 100.100.0.0/16
+    Tags:
+        - Key: stack
          Value: production
