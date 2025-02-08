@@ -1,14 +1,13 @@
-AWSTemplateFormatVersion: "2010-09-09"
-Description: > 
-   Template to create VPC in us-east-1 region
-   Author: Ajmal
-   Company: test
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to create a VPC
+
 Resources:
-  Name: MyFeb-VPC
-  myVPC: 
+  MyVPC:
     Type: AWS::EC2::VPC
     Properties:
-        CidrBlock: 100.100.0.0/16
-    Tags:
-        - Key: stack
-         Value: production
+      CidrBlock: 100.100.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: MyProdVPC
