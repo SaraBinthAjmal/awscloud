@@ -32,6 +32,8 @@ jobs:
       # - run: sleep 20
       # - run: aws cloudformation describe-stack-events --stack-name MyFeb-vpc
       - run: ls -lR
-      - run: aws cloudformation create-stack --stack-name prod-vpc --template-body file://cloudformation/vpc.yaml
+      # - run: aws cloudformation create-stack --stack-name prod-vpc --template-body file://cloudformation/vpc.yaml
+      - run: aws cloudformation create-stack --stack-name prod-vpc --template-body file://cloudformation/vpc.yaml --capabilities CAPABILITY_NAMED_IAM
+
       - run: sleep 20
       - run: aws cloudformation describe-stack-events --stack-name prod-vpc
