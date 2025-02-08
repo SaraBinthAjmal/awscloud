@@ -4,10 +4,11 @@ Description: >
    Author: Ajmal
    Company: test
 Resources:
+  Name: MyFeb-VPC
   myVPC: 
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: 10.0.0.0/16
+      CidrBlock: 100.100.0.0/16
       Tags:
        - Key: stack
          Value: production
