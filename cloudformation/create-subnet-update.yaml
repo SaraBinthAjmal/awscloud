@@ -1,12 +1,6 @@
-name: Create-Subnet-Demo
+name: GitHub Subnet Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: Target environment runs manually
-        required: true
-        type: string
+on: 
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -22,9 +16,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-#      - uses: aws-actions/configure-aws-credentials@v2
-#        with:
-#          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#          aws-region: us-east-1
+      - uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
       - run: aws ec2 create-subnet --vpc-id vpc-0424bd07b2433d81c --cidr-block 172.31.0.55/28 --tag-specifications "ResourceType=subnet,Tags=[{Key=Name,Value=my-ipv4-subnet}]"

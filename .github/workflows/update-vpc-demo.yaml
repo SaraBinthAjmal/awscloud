@@ -21,4 +21,4 @@ jobs:
       - run: ls -lR
       - run: aws cloudformation update-stack --stack-name prod-vpc --template-body file://cloudformation/vpc.yaml
       - run: sleep 20
-      - run: aws cloudformation describe-stack-events --stack-name prod-vc
+      - run: aws cloudformation describe-stack-events --stack-name prod-vpc
