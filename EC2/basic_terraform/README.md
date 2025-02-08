@@ -1,13 +1,13 @@
-#Terraform Code for AWS CloudWatch Alarm
+# Terraform Code for AWS CloudWatch Alarm
 
-##Components:
+## Components:
 
 Creates a CloudWatch Alarm for EC2 CPU Utilization.
 Sets a threshold of 80% for 5 minutes.
 Sends a notification to an SNS topic.
 Subscribes an email address to receive alerts.
 
-##Terraform Script
+## Terraform Script
 
 ```
 provider "aws" {
